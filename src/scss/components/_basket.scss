@@ -1,0 +1,21 @@
+.basket {
+  position: relative;
+  z-index: 111;
+  display: flex;
+
+  &__counter {
+    @include rubik-normal;
+
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    min-width: 16px;
+    min-height: 16px;
+    font-size: 12px;
+    background-color: var(--color-orange);
+  }
+}

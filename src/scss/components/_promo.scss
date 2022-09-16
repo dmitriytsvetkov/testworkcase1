@@ -1,0 +1,119 @@
+.promo {
+  position: relative;
+  z-index: 1;
+  min-height: 792px;
+  background-image: url("../../img/bg.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+
+  &__title {
+    @include rubik-bold;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 60px;
+    padding: 0;
+    font-size: 36px;
+    line-height: 105%;
+    color: var(--color-white);
+
+    &-text {
+      @include rubik-normal;
+
+      margin-top: 24px;
+      max-width: 50%;
+      font-size: 18px;
+      line-height: 115%;
+      color: var(--color-black);
+    }
+  }
+
+  &__subtitle {
+    @include rubik-bold;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    max-width: 32%;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--color-black);
+
+    &-text {
+      @include rubik-normal;
+
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 115%;
+    }
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    right: -55px;
+    bottom: -115px;
+    z-index: -1;
+  }
+}
+
+@include tablet {
+  .promo {
+    &__title {
+      margin-bottom: 120px;
+      font-size: 80px;
+
+      &-text {
+        font-size: 22px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 32px;
+
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include desktop-1024 {
+  .promo {
+    position: initial;
+    z-index: unset;
+
+    &__container {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__title {
+      font-size: 120px;
+
+      &-text {
+        font-size: 24px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 36px;
+
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@include desktop-1140 {
+  .promo__title {
+    font-size: 144px;
+  }
+}

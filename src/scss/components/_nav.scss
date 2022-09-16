@@ -1,0 +1,67 @@
+.nav {
+  z-index: 111;
+  display: none;
+  order: 1;
+  padding-top: 20px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__link {
+    @include rubik-normal;
+
+    padding: 5px 0;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--color-white);
+  }
+}
+
+.menu--active {
+  display: block;
+}
+
+@include tablet-900 {
+  .nav {
+    display: block;
+    order: unset;
+    padding-top: 0;
+    width: auto;
+
+    &__item {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      font-size: 16px;
+    }
+  }
+}
+
+@include desktop-1024 {
+  .nav {
+    &__link {
+      font-size: 18px;
+    }
+  }
+}
+
+@include desktop-1140 {
+  .nav__item:not(:last-child) {
+    margin-right: 40px;
+  }
+}

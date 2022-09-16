@@ -1,0 +1,25 @@
+/* stylelint-disable */
+
+@mixin tablet {
+  @media screen and (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin tablet-900 {
+  @media screen and (min-width: (900px)) {
+    @content;
+  }
+}
+
+@mixin desktop-1024 {
+  @media screen and (min-width: (1024px)) {
+    @content;
+  }
+}
+
+@mixin desktop-1140 {
+  @media screen and (min-width: (1140px)) {
+    @content;
+  }
+}

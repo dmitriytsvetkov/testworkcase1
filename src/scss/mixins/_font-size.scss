@@ -1,0 +1,11 @@
+@mixin rubik-normal {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin rubik-bold {
+  font-family: 'Rubik', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}

@@ -1,0 +1,87 @@
+.discount {
+  padding: 110px 0;
+  color: var(--color-white);
+  background-color: var(--color-black);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1087px;
+  }
+
+  &__title {
+    @include rubik-bold;
+
+    margin: 0 0 85px;
+    font-size: 28px;
+    line-height: 118.5%;
+    text-align: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+
+  &__amount {
+    @include rubik-normal;
+
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    line-height: 118.5%;
+
+    &--old {
+      margin-right: 32px;
+      font-size: 23px;
+      text-decoration: line-through;
+      color: var(--color-grey);
+    }
+  }
+
+  &__benefits {
+    margin-bottom: 64px;
+    width: 100%;
+  }
+
+  &__make-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    padding: 17px 32px;
+    min-width: 256px;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-black);
+    background-color: var(--color-orange);
+  }
+}
+
+@include tablet {
+  .discount {
+    &__title {
+      padding: 0 10%;
+      font-size: 38px;
+    }
+
+    &__amount {
+      font-size: 48px;
+
+      &--old {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@include desktop-1024 {
+  .discount {
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
